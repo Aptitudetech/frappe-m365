@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include frappe_m365 *.css
+recursive-include frappe_m365 *.csv
+recursive-include frappe_m365 *.html
+recursive-include frappe_m365 *.ico
+recursive-include frappe_m365 *.js
+recursive-include frappe_m365 *.json
+recursive-include frappe_m365 *.md
+recursive-include frappe_m365 *.png
+recursive-include frappe_m365 *.py
+recursive-include frappe_m365 *.svg
+recursive-include frappe_m365 *.txt
+recursive-exclude frappe_m365 *.pyc
