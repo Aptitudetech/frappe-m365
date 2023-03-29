@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-27 11:37:20.452869",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "oauth_authorization_section",
+  "connected_app",
+  "column_break_8",
+  "connected_user",
+  "endpoints_section",
+  "m365_graph_url",
+  "sharepoint_settings_section",
+  "enable_file_sync",
+  "replace_file_link",
+  "column_break_4",
+  "default_m365_group",
+  "section_break_6",
+  "module_settings"
+ ],
+ "fields": [
+  {
+   "fieldname": "oauth_authorization_section",
+   "fieldtype": "Section Break",
+   "label": "Oauth Authorization"
+  },
+  {
+   "fieldname": "connected_app",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Connected App",
+   "options": "Connected App",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "connected_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Connected User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "endpoints_section",
+   "fieldtype": "Section Break",
+   "label": "Endpoints"
+  },
+  {
+   "fieldname": "m365_graph_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "M365 Graph URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sharepoint_settings_section",
+   "fieldtype": "Section Break",
+   "label": "SharePoint Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_file_sync",
+   "fieldtype": "Check",
+   "label": "Enable File Sync"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.enable_file_sync == 1",
+   "description": "if checked the file url will be replaced with sharepoint url and file will be removed form frappe server",
+   "fieldname": "replace_file_link",
+   "fieldtype": "Check",
+   "label": "Replace File Link"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.enable_file_sync == 1",
+   "description": "default M365 group to synch all your files",
+   "fieldname": "default_m365_group",
+   "fieldtype": "Link",
+   "label": "Default M365 Group",
+   "mandatory_depends_on": "eval: doc.enable_file_sync == 1",
+   "options": "M365 Groups"
+  },
+  {
+   "depends_on": "eval: doc.enable_file_sync == 1",
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "module_settings",
+   "fieldtype": "Table",
+   "label": "Module Settings",
+   "options": "M365 Groups Module Settings"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-03-28 14:47:12.604380",
+ "modified_by": "Administrator",
+ "module": "Frappe M365",
+ "name": "M365 Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

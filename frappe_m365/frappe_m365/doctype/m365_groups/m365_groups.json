@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "autoname": "field:m365_group_name",
+ "creation": "2023-03-27 11:42:37.145761",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable",
+  "m365_group_information_section",
+  "m365_group_name",
+  "m365_group_id",
+  "m365_group_description",
+  "column_break_5",
+  "mailnickname",
+  "m365_member_info_section",
+  "m365_groups_member",
+  "m365_sharepoint_information_section",
+  "m365_sharepoint_site",
+  "column_break_vfjdb",
+  "m365_sharepoint_id"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "M365 Group dedicated mailbox nickname",
+   "fieldname": "mailnickname",
+   "fieldtype": "Data",
+   "label": "M365 Group MailBox Name",
+   "read_only_depends_on": "eval: !doc.__islocal",
+   "unique": 1
+  },
+  {
+   "depends_on": "eval: doc.m365_group_id",
+   "fieldname": "m365_sharepoint_information_section",
+   "fieldtype": "Section Break",
+   "label": "M365 SharePoint Information"
+  },
+  {
+   "fieldname": "m365_sharepoint_id",
+   "fieldtype": "Data",
+   "label": "M365 SharePoint ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vfjdb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "m365_group_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "M365 Group Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "m365_group_id",
+   "fieldtype": "Data",
+   "label": "M365 Group ID",
+   "read_only": 1
+  },
+  {
+   "description": "an optional description for M365 Group",
+   "fieldname": "m365_group_description",
+   "fieldtype": "Small Text",
+   "label": "M365 Group Description",
+   "max_height": "50px",
+   "read_only_depends_on": "eval: !doc.__islocal",
+   "width": "50px"
+  },
+  {
+   "fieldname": "m365_group_information_section",
+   "fieldtype": "Section Break",
+   "label": "M365 Group Information"
+  },
+  {
+   "fieldname": "m365_sharepoint_site",
+   "fieldtype": "Data",
+   "label": "M365 SharePoint Site",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.m365_group_id",
+   "fieldname": "m365_member_info_section",
+   "fieldtype": "Section Break",
+   "label": "M365 Member Info"
+  },
+  {
+   "fieldname": "m365_groups_member",
+   "fieldtype": "Table MultiSelect",
+   "label": "M365 Groups Member",
+   "options": "M365 Groups Member"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-28 15:00:42.173938",
+ "modified_by": "Administrator",
+ "module": "Frappe M365",
+ "name": "M365 Groups",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
