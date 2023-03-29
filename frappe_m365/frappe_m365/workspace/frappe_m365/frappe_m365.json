@@ -1,0 +1,41 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"6EuKgRMHk7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Frappe M365</span>\",\"col\":12}},{\"id\":\"3WGB_2Xwn0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"M365 Groups\",\"col\":3}},{\"id\":\"E3DaDDyxsr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"M365 Settings\",\"col\":3}}]",
+ "creation": "2023-03-29 09:15:25.336707",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "integration",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Frappe M365",
+ "links": [],
+ "modified": "2023-03-29 09:22:21.776048",
+ "modified_by": "ssaini@devaptech.onmicrosoft.com",
+ "module": "Frappe M365",
+ "name": "Frappe M365",
+ "owner": "ssaini@devaptech.onmicrosoft.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "M365 Settings",
+   "link_to": "M365 Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "M365 Groups",
+   "link_to": "M365 Groups",
+   "type": "DocType"
+  }
+ ],
+ "title": "Frappe M365"
+}
