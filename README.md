@@ -58,43 +58,44 @@ Please Create Github Issue [here](https://github.com/Aptitudetech/microsoft_inte
 
 ### Setup and Use:
 
-#### In ERPNext Microsoft Integration
+#### In Frappe M365
 
-1. Go to → Office 365 Groups
+1. Go to → M365 Groups 
     
-    Enter Group Information and provide Oauth Authorization
+    Enter Group Information
     
     - When creating an M365 Group, if no Group Members are specified, the Group will be created without specific permissions.
-    - When a Role is associated with the Group, members of the Role are added to the Group.  Afterward, if a user is removed from the Role, it will be also removed from the Group
+    - When a user is associated with the Group, user added as a member in the Group.  Afterward, if a user is removed from the Group, it will be also removed from the Group
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/Office%20365%20Groups.png" height="480">
+<img src="/Aptitudetech/frappe-m365/raw/develop/.github/m365_groups.png" height="480">
 
-2. Go to → Office 365 Groups Settings -> New
+2. Go to → M365 Groups Settings ->
     
     Setup and define following settings:
 
-    1. Enable and Disable file sync.
+    1. App Oauth Information.
+    2. Enable and Disable file sync.
         - Only new files will be synchronized.
-    2. Replace File Link with SharePoint site web url.
+    3. Replace File Link with SharePoint site web url.
         - If unchecked, file will reside on both sides.
         - If checked, file resides ONLY in SharePoint.
-    3. Default Group for all your files.
+    4. Default Group for all your files.
         - Default group with which files will be synchronized.
-    4. Module Settings:
+    5. Module Settings:
         1. Define Module and Default Group for file sync.
-        2. Add Role based file synch.
+        2. Add Role based file sync.
         
-        - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific group per module.
+        - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific Group per Module.
         - If a Role is specified, only users part of this role will synchronize over the specified group.  Other users will default to the "Default M365 Group".
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/Office%20365%20Groups%20Settings.png" height="480">
+<img src="/Aptitudetech/frappe-m365/raw/develop/.github/m365_settings.png" height="480">
 
 
 #### In Microsoft Azure Active Directory
 
 1. Go to → Your Azure Portal -> Create New App Registration and use it for Connected Apps
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/App%20Registration.png" height="480">
+<img src="/Aptitudetech/frappe-m365/raw/develop/.github/app_registration.png" height="480">
 
 2. Add some extra delegated permissions in your App permissions list
     1. offline_access
