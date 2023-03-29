@@ -5,9 +5,9 @@
     <h2>Aptitude Technologies</h2>
 </div>
 
-## Microsoft Office 365 Groups
+## Microsoft 365 Groups
 
-<p>Groups in Microsoft Office 365 let you choose a set of people that you wish to collaborate with and easily set up a collection of resources for those people to share. Resources such as a shared Outlook inbox, shared calendar or a document library for collaborating on files.</p>
+<p>Groups in Microsoft 365 let you choose a set of people that you wish to collaborate with and easily set up a collection of resources for those people to share. Resources such as a shared Outlook inbox, shared calendar or a document library for collaborating on files.</p>
 
 ## Group types in Azure AD and Microsoft Graph
 
@@ -20,13 +20,13 @@
 3. Mail-enabled security groups
 4. Distribution groups
 
-<p>Note: Only the Microsoft 365 groups can be managed through our app right now.</p>
+<p>Note: Only the Microsoft 365 groups type can be managed through our app right now.</p>
 
 ---
 
 ## Main Features
 
-1. Create and Manage multiple Office 365 Groups
+1. Create and Manage multiple MS 365 Groups
 2. Manage Group Members
 3. One SharePoint site per Group
 4. Manage file storage
@@ -36,8 +36,8 @@
 
 #### Self Hosting:
 
-1. `bench get-app https://github.com/Aptitudetech/microsoft_integration.git`
-2. `bench --site [your.site.name] install-app microsoft_integration`
+1. `bench get-app https://github.com/Aptitudetech/frappe-m365.git`
+2. `bench --site [your.site.name] install-app frappe-m365`
 3. `bench --site [your.site.name] migrate`
 4. `bench restart`
 
@@ -45,56 +45,56 @@
 
 ### Bug report:
 
-Please Create Github Issue [here](https://github.com/Aptitudetech/microsoft_integration/issues/new)
+Please Create Github Issue [here](https://github.com/Aptitudetech/frappe-m365/issues/new)
 
 ---
 
 ### Dependencies:
 
 - [Frappe](https://github.com/frappe/frappe)
-- [Erpnext](https://github.com/frappe/erpnext)
 
 ---
 
 ### Setup and Use:
 
-#### In ERPNext Microsoft Integration
+#### In Frappe M365
 
-1. Go to → Office 365 Groups
+1. Go to → M365 Groups 
     
-    Enter Group Information and provide Oauth Authorization
+    Enter Group Information
     
     - When creating an M365 Group, if no Group Members are specified, the Group will be created without specific permissions.
-    - When a Role is associated with the Group, members of the Role are added to the Group.  Afterward, if a user is removed from the Role, it will be also removed from the Group
+    - When a user is associated with the Group, user added as a member in the Group.  Afterward, if a user is removed from the Group, it will be also removed from the Group
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/Office%20365%20Groups.png" height="480">
+<img src="https://user-images.githubusercontent.com/16163737/228617772-e58d0618-7a3c-4ae4-b08a-e415e78d0a2a.png" height="480">
 
-2. Go to → Office 365 Groups Settings -> New
+2. Go to → M365 Groups Settings ->
     
     Setup and define following settings:
 
-    1. Enable and Disable file sync.
+    1. App Oauth Information.
+    2. Enable and Disable file sync.
         - Only new files will be synchronized.
-    2. Replace File Link with SharePoint site web url.
+    3. Replace File Link with SharePoint site web url.
         - If unchecked, file will reside on both sides.
         - If checked, file resides ONLY in SharePoint.
-    3. Default Group for all your files.
+    4. Default Group for all your files.
         - Default group with which files will be synchronized.
-    4. Module Settings:
+    5. Module Settings:
         1. Define Module and Default Group for file sync.
-        2. Add Role based file synch.
+        2. Add Role based file sync.
         
-        - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific group per module.
+        - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific Group per Module.
         - If a Role is specified, only users part of this role will synchronize over the specified group.  Other users will default to the "Default M365 Group".
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/Office%20365%20Groups%20Settings.png" height="480">
+<img src="https://user-images.githubusercontent.com/16163737/228617627-e808857c-92f4-4098-89b0-d3438a0c2090.png" height="480">
 
 
 #### In Microsoft Azure Active Directory
 
 1. Go to → Your Azure Portal -> Create New App Registration and use it for Connected Apps
 
-<img src="https://divinit.ca/assets/microsoft_integration/images/App%20Registration.png" height="480">
+<img src="https://user-images.githubusercontent.com/16163737/228617348-116fec64-ce96-4337-bed8-c6b2f2ec7340.png" height="480">
 
 2. Add some extra delegated permissions in your App permissions list
     1. offline_access
