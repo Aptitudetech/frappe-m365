@@ -98,10 +98,8 @@ class M365Groups(Document):
             time.sleep(10)
 
         msg = '''
-				<p>we are now started mapping Frappe server with M365 Groups.</p>
-				<p>This is a long process, so we added a background job for you.
-				You may continue using the application.</p><br>
-                <p>We will notfiy you once the service is ready to use.</p>
+				<pThe mapping of Frappe modules > M365 Group has started.
+                You will be notified once the service is ready to use</p>
 			'''
         frappe.msgprint(msg)
         self.create_sharepoint_service()
@@ -230,11 +228,10 @@ class M365Groups(Document):
 
         if members_not_in_org:
             msg = """
-				<p>we found some user(s), which are not in your
-				organization. Below are the list of those,</p>
-				<p><b>{0}</b></p>
-				<p>we are not updating these in M365 Group.</p>
-			""".format("<br>".join(members_not_in_org))
+				<p>At least {0} user(s) is not part of your organization:</p>
+				<p><b>{1}</b></p>
+				<p>User(s) in this list will not be added to the M365 Group.</p>
+			""".format(len(members_not_in_org), "<br>".join(members_not_in_org))
             frappe.msgprint(msg)
 
     def delete_members_in_group(self):

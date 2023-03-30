@@ -21,3 +21,21 @@ frappe.ui.form.on('M365 Settings', {
 		}
 	}
 });
+
+frappe.ui.form.on("M365 Groups Module Settings", {
+	update_user: function(frm, cdt, cdn){
+		let child = locals[cdt][cdn];
+		if(child.__islocal == 1){
+			frappe.msgprint("Please save the form first.");
+		}else if(child.role){
+			frappe.call({
+				"method": "frappe_m365.frappe_m365.doctype.m365_settings.m365_settings.update_group_members",
+				"args": {"role": child.role, "group": child.default_group},
+				"freeze": 1,
+				"freeze_message": "<h4>Please wait while we are updating members in office 365 group...</h4>"
+			})
+		}else{
+			frappe.msgprint("Please select a Role.");
+		}
+	}
+});
