@@ -32,7 +32,7 @@ frappe.ui.form.on("M365 Groups Module Settings", {
 				"method": "frappe_m365.frappe_m365.doctype.m365_settings.m365_settings.update_group_members",
 				"args": {"role": child.role, "group": child.default_group},
 				"freeze": 1,
-				"freeze_message": "<h4>Please wait while we are updating members in office 365 group...</h4>"
+				"freeze_message": "<h4>Please wait while we are updating members in M365 Group...</h4>"
 			})
 		}else{
 			frappe.msgprint("Please select a Role.");
