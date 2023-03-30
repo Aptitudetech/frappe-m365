@@ -41,7 +41,7 @@ class SharePoint(object):
     def run_sharepoint_mapping(self):
         self.mapping_modules_in_shareopint()
         self.mapping_modules_doctype_in_sharepoint()
-        msg = self.group_doc.name + " has been created and mapped sucessfully."
+        msg = "M365 Group(<b>" + self.group_doc.name + "</b>) has been created and mapped sucessfully."
         self.send_notification_to_user(msg)
 
     def send_notification_to_user(self, msg):
@@ -73,11 +73,9 @@ class SharePoint(object):
         response = make_request('GET', url, headers, None)
         if response.status_code == 200 or response.ok:
             for items in response.json()['value']:
-                self.sharepoint_list_items.append(
-                    {"name": items["name"], "id": items["id"]})
+                self.sharepoint_list_items.append({"name": items["name"], "id": items["id"]})
         else:
-            frappe.log_error(
-                "sharepoint list items fetch error", response.text)
+            frappe.log_error("sharepoint list items fetch error", response.text)
 
         return self.sharepoint_list_items
 
