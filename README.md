@@ -87,7 +87,7 @@ Please Create Github Issue [here](https://github.com/Aptitudetech/frappe-m365/is
         - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific Group per Module.
         - If a Role is specified, only users part of this role will synchronize over the specified group.  Other users will default to the "Default M365 Group".
 
-<img src="https://user-images.githubusercontent.com/16163737/228617627-e808857c-92f4-4098-89b0-d3438a0c2090.png" height="520">
+<img src="https://user-images.githubusercontent.com/16163737/228617627-e808857c-92f4-4098-89b0-d3438a0c2090.png" height="550">
 
 
 #### In Microsoft Azure Active Directory
