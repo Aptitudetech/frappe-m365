@@ -89,7 +89,7 @@ Please Create Github Issue [here](https://github.com/Aptitudetech/frappe-m365/is
         - If a Role is specified, only users part of this role will synchronize over the specified group. Other users will default to the "Default M365 Group".
         - If a Role is selected, Default Group is mentioned and Update User(s) is clicked, all the user(s) having that role will become the members of that Group.
 
-<img src="https://user-images.githubusercontent.com/16163737/228869566-9a88848c-908e-462a-950b-b6db17f8f622.png" height="480">
+<img src="https://user-images.githubusercontent.com/16163737/228869566-9a88848c-908e-462a-950b-b6db17f8f622.png" height="550">
 
 
 #### In Microsoft Azure Active Directory
