@@ -57,7 +57,7 @@ frappe.ui.form.on('M365 Groups', {
 				frappe.call({
 					method: "update_m365_groups_members",
 					freeze: 1,
-					freeze_message: "<h4>Please wait while we are updating members in office 365 group...</h4>",
+					freeze_message: "<h4>Please wait while we are updating members in M365 Group...</h4>",
 					doc: frm.doc,
 					callback: function (r) {
 						frm.reload_doc();
