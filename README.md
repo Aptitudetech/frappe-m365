@@ -85,9 +85,11 @@ Please Create Github Issue [here](https://github.com/Aptitudetech/frappe-m365/is
         2. Add Role based file sync.
         
         - On this table, the app provides the flexibility to override the "Default M365 Group" and configure specific Group per Module.
-        - If a Role is specified, only users part of this role will synchronize over the specified group.  Other users will default to the "Default M365 Group".
+        - If the user(s) is not the part of your Organization, those user(s) will not be added to the M365 group
+        - If a Role is specified, only users part of this role will synchronize over the specified group. Other users will default to the "Default M365 Group".
+        - If a Role is selected, Default Group is mentioned and Update User(s) is clicked, all the user(s) having that role will become the members of that Group.
 
-<img src="https://user-images.githubusercontent.com/16163737/228617627-e808857c-92f4-4098-89b0-d3438a0c2090.png" height="480">
+<img src="https://user-images.githubusercontent.com/16163737/228870390-78e414cf-9baf-4749-8985-643e10f98574.png" height="580">
 
 
 #### In Microsoft Azure Active Directory

@@ -14,7 +14,7 @@
   "m365_group_description",
   "column_break_5",
   "mailnickname",
-  "m365_member_info_section",
+  "m365_group_member_info_section",
   "m365_groups_member",
   "m365_sharepoint_information_section",
   "m365_sharepoint_site",
@@ -91,21 +91,21 @@
    "read_only": 1
   },
   {
-   "depends_on": "eval: doc.m365_group_id",
-   "fieldname": "m365_member_info_section",
-   "fieldtype": "Section Break",
-   "label": "M365 Member Info"
-  },
-  {
    "fieldname": "m365_groups_member",
    "fieldtype": "Table MultiSelect",
-   "label": "M365 Groups Member",
+   "label": "M365 Group Members",
    "options": "M365 Groups Member"
+  },
+  {
+   "depends_on": "eval: doc.m365_group_id",
+   "fieldname": "m365_group_member_info_section",
+   "fieldtype": "Section Break",
+   "label": "M365 Group Member Info"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-28 15:00:42.173938",
+ "modified": "2023-03-30 09:15:38.868067",
  "modified_by": "Administrator",
  "module": "Frappe M365",
  "name": "M365 Groups",

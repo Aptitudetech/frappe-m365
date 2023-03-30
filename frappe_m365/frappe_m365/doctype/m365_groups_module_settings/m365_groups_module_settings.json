@@ -9,7 +9,9 @@
  "field_order": [
   "module",
   "default_group",
-  "role"
+  "column_break_phz9l",
+  "role",
+  "update_user"
  ],
  "fields": [
   {
@@ -34,12 +36,23 @@
    "in_list_view": 1,
    "label": "Role",
    "options": "Role"
+  },
+  {
+   "fieldname": "column_break_phz9l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "all the user(s) associated with the Role will be added to M365 Group",
+   "fieldname": "update_user",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Update User(s)"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-03-28 10:43:08.695973",
+ "modified": "2023-03-30 08:29:03.783399",
  "modified_by": "Administrator",
  "module": "Frappe M365",
  "name": "M365 Groups Module Settings",
