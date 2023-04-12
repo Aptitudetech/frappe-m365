@@ -9,9 +9,10 @@ GROUPS = "M365 Groups"
 def file_upload(doc, method):
     doctype = doc.attached_to_doctype
     docname = doc.attached_to_name
+    is_file_uploaded = doc.uploaded_to_sharepoint
     group_doc, group_id, filepath = None, None, None
 
-    if (doctype and docname and method == "after_insert" and frappe.db.exists(M365)):
+    if (doctype and docname and method == "after_insert" and frappe.db.exists(M365) and is_file_uploaded == 0):
         group_settings = frappe.get_single(M365)
         if group_settings.enable_file_sync:
             group_doc, group_id = get_group_doc(doctype, group_settings)
@@ -25,13 +26,13 @@ def file_upload(doc, method):
             filepath=filepath, filedoc=doc.name, timeout=-1
         )
 
-
 # preparing complete file path
 def get_file_path(doc):
     path = "private/files" if doc.is_private else "public/files"
-    filepath = os.path.abspath(os.curdir) + "/" + frappe.get_site_path(path, doc.file_name)
+    abspath = os.path.abspath(os.curdir)
+    site_path = frappe.get_site_path(path, doc.file_name)
+    filepath = f'{abspath}/{site_path}'
     return filepath
-
 
 # return M365 group doc based on settings in M365 Groups Settings doctype
 def get_group_doc(doctype, group_settings):

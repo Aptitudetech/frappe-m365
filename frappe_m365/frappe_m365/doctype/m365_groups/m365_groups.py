@@ -98,7 +98,7 @@ class M365Groups(Document):
             time.sleep(10)
 
         msg = '''
-				<pThe mapping of Frappe modules > M365 Group has started.
+				<p>The mapping of Frappe modules > M365 Group has started.
                 You will be notified once the service is ready to use</p>
 			'''
         frappe.msgprint(msg)

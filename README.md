@@ -7,11 +7,13 @@
 
 ## Microsoft 365 Groups
 
-<p>Groups in Microsoft 365 let you choose a set of people that you wish to collaborate with and easily set up a collection of resources for those people to share. Resources such as a shared Outlook inbox, shared calendar or a document library for collaborating on files.</p>
+<p>Groups in Microsoft 365 let you choose a set of people that you wish to collaborate with and easily set up a collection of resources for those people to share. 
+Resources such as a shared Outlook inbox, shared calendar or a document library for collaborating on files.</p>
 
 ## Group types in Azure AD and Microsoft Graph
 
-<p>Groups are collections of principals with shared access to resources in Microsoft services or in your app. Different principals such as users, other groups, devices, and applications can be part of groups.</p>
+<p>Groups are collections of principals with shared access to resources in Microsoft services or in your app. 
+Different principals such as users, other groups, devices, and applications can be part of groups.</p>
 
 <p>Azure Active Directory (Azure AD) supports the following types of groups.</p>
 
@@ -22,11 +24,21 @@
 
 <p>Note: Only the Microsoft 365 groups type can be managed through our app right now.</p>
 
+## Why Integration with Microsoft 365
+
+<p>we created this integration to manage and sync Group(s) in Microsoft 365 as well as to use data storage
+offered by Microsoft for file uploads. few things which you can do with this integration, </p>
+
+1. you can create Group(s)
+2. you can manage Group members
+3. you can enable SharePoint upload, which is a service offered by Microsoft where you can safly haven all creative files
+4. you can manage file sync based on Frappe modules and you can define which MS365 Group you want to use for that module as well as you can define certain role for file sync
+
 ---
 
 ## Main Features
 
-1. Create and Manage multiple MS 365 Groups
+1. Create and Manage multiple MS365 Groups
 2. Manage Group Members
 3. One SharePoint site per Group
 4. Manage file storage

@@ -59,7 +59,6 @@ class SharePoint(object):
         notification.insert(ignore_permissions=True)
         frappe.publish_realtime(event='m365_groups', message=msg, user=self.user)
 
-
     def get_sharepoint_list_items(self, list_id):
         '''
             fetching sharepoint sublist based on 
@@ -151,9 +150,11 @@ class SharePoint(object):
             response = make_request('PUT', url, headers, file_content)
             if not response.ok:
                 frappe.log_error("File Upload Error", response.text)
-            elif response.ok and frappe.db.get_single_value(M365, "replace_file_link"):
-                frappe.db.set_value("File", self.filedoc,"file_url", response.json()['webUrl'])
-                self.remove_file()
+            elif response.ok:
+                frappe.db.set_value("File", self.filedoc, "uploaded_to_sharepoint", 1)
+                if self.settings.replace_file_link:
+                    frappe.db.set_value("File", self.filedoc,"file_url", response.json()['webUrl'])
+                    self.remove_file() 
 
 
     def get_data_id_from_sharepoint(self, list_id, list_item):
