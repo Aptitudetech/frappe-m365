@@ -24,15 +24,15 @@ Different principals such as users, other groups, devices, and applications can 
 
 <p>Note: Only the Microsoft 365 groups type can be managed through our app right now.</p>
 
-## Why Integration with Microsoft 365
+## Why we did the integration between Frappe and Microsoft 365 Groups
 
-<p>we created this integration to utilize Microsoft 365 Groups service as well as to use data storage offered by Microsoft for file uploads.
-few things which you can do with this integration, </p>
+**Improved collaboration:** By integrating ERPNext and Microsoft 365 Groups, team members can collaborate more efficiently and effectively. They can easily share documents, communicate through shared inbox, schedule meetings using shared calendar, and track project progress using shared OneNote notebook.
 
-1. you can create Group(s)
-2. you can manage Group members
-3. you can enable SharePoint upload, which is a service offered by Microsoft where you can safly haven all creative files
-4. you can manage file sync based on Frappe modules and you can define which MS365 Group you want to use for that module as well as you can define certain role for file sync
+**Centralized data management:** ERPNext provides robust functionality for managing business processes, such as finance, inventory, and procurement, while Microsoft 365 Groups provide a central hub for managing communication, collaboration, and project management. By integrating these two systems, businesses can benefit from a centralized platform for managing both operational and collaborative tasks.
+
+**Enhanced productivity:** Integration between ERPNext and Microsoft 365 Groups can help streamline workflows, automate tasks, and reduce manual data entry, freeing up employees to focus on more important tasks.
+
+**Increased visibility and control:** ERPNext provides real-time visibility into business processes, while Microsoft 365 Groups provides real-time visibility into project progress and collaboration. By integrating these systems, businesses can gain a more comprehensive view of their operations, enabling better decision-making and control.
 
 ---
 
