@@ -26,8 +26,8 @@ Different principals such as users, other groups, devices, and applications can 
 
 ## Why Integration with Microsoft 365
 
-<p>we created this integration to manage and sync Group(s) in Microsoft 365 as well as to use data storage
-offered by Microsoft for file uploads. few things which you can do with this integration, </p>
+<p>we created this integration to utilize Microsoft 365 Groups service as well as to use data storage offered by Microsoft for file uploads.
+few things which you can do with this integration, </p>
 
 1. you can create Group(s)
 2. you can manage Group members
