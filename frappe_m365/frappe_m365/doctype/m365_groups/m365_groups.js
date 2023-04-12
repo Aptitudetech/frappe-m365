@@ -14,8 +14,8 @@ frappe.ui.form.on('M365 Groups', {
 	},
 
 	set_default_values: function (frm) {
-		if (!frm.doc.group_description) {
-			frm.set_value('m365_group_description', 'This group has been create from Frappe-M365');
+		if (!frm.doc.m365_group_description) {
+			frm.set_value('m365_group_description', 'This group has been created from Frappe-M365');
 		}
 
 		if (frm.doc.group_id) {
