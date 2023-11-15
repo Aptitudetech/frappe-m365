@@ -52,7 +52,11 @@ class M365Groups(Document):
         '''
         headers = get_request_header(self._settings)
         url = f'{self._settings.m365_graph_url}/me'
-        return make_request('GET', url, headers, None).json()['id']
+        res = make_request('GET', url, headers, None)#.json()
+        if res.ok:
+            return res.json()['id']
+        else:
+            frappe.throw(f"{res.json()['error']['message']}")
 
     def is_m365_group_exist(self):
         if not self.m365_group_id:
